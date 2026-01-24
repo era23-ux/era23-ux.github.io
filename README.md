@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки на итоговое задание</title>
+        
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 
+    <script src="../scripts/testScript.js" defer></script>
+</head>
+<nav>
+    <div>
+        <a href="pages/test.html">Тест</a>
+    </div>
+    <div>
+        <a href="pages/conferenceRegistration.html">Конференция</a>
+    </div>
+    <div>
+        <a href="pages/gallery.html">Галерея</a>
+    </div>
+</nav>
+<body>
+</body>
+<footer>
+    <div>
+        Ермакова Р.А. ПИ-С-23
+    </div>
+</footer>
+</html>
