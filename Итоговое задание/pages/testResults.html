@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты теста</title>
+            
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<nav>
+    <div>
+        <a href="test.html">Тест</a>
+    </div>
+    <div>
+        <a href="conferenceRegistration.html">Конференция</a>
+    </div>
+    <div>
+        <a href="gallery.html">Галерея</a>
+    </div>
+</nav>
+<body>
+    <div class="card">
+        <div>
+            Набрано баллов: 
+        </div>
+
+        <div id="scoreDisplay">
+        </div>
+
+        <div id="wrongAnswersCaption">
+            Неправильные ответы:
+        </div>
+
+        <div id="wrongAnswersDisplay"></div>
+    </div>
+
+    <script>
+        const score = localStorage.getItem('userScore');
+        document.getElementById('scoreDisplay').textContent = score;
+        if (score === "6") {
+            const wrongAnswersCaption = document.getElementById('wrongAnswersCaption');
+            wrongAnswersCaption.style.display = 'none';
+        }
+
+
+        const wrongAnswers = JSON.parse(localStorage.getItem('wrongAnswers') || "[]");
+        const wrongAnswersDisplay = document.getElementById('wrongAnswersDisplay');
+        wrongAnswers.forEach(answer => {
+            const div = document.createElement('div');
+            div.textContent = answer;
+            wrongAnswersDisplay.appendChild(div);
+        });
+    </script>
+</body>
+<footer>
+    <div>
+        Ермакова Р.А. ПИ-С-23
+    </div>
+</footer>
+</html>

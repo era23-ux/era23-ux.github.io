@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация на конференцию</title>
+    
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+
+    <script src="../scripts/confRegScript.js" defer></script>
+</head>
+<nav>
+    <div>
+        <a href="test.html">Тест</a>
+    </div>
+    <div>
+        <a href="conferenceRegistration.html">Конференция</a>
+    </div>
+    <div>
+        <a href="gallery.html">Галерея</a>
+    </div>
+</nav>
+<body>
+    <!-- 1. Создать форму регистрации участников конференции: (10 баллов)
+
+        Имя (должны быть указаны полностью фамилия, имя и отчество), 
+        Контактный телефон,
+        Адрес электронной почты, 
+        Список с секциями конференции (математика, физика, информатика)
+        Дата рождения
+        Доклад (переключатель), 
+        если есть доклад – то отображается поле для ввода темы. 
+
+        2. Добавьте валидацию формы. (10 баллов)
+        Все поля, кроме даты рождения, обязательны для заполнения;
+        Поля имя, фамилия, отчество содержат только буквы русского алфавита;
+        Поле телефон содержит только цифры, длина 11 символов, первые два символа +7
+        Корректность адреса электронной почты. 
+        
+        3. Оформление формы регистрации (flex, grid разметка). (20 баллов)
+
+        4. После заполнения всех полей и нажатия на кнопку "отправить" формируется страница, 
+        содержащая все ответы пользователя. (20 баллов + 10 баллов за оформление сформированной страницы) 
+        (работа с JavaScript или с PHP, пример работы с PHP посмотреть в задании Знакомство с PHP )-->
+
+    <div class="card">
+        <form action="" method="post" class="wrapperRegistration" id="regForm">
+            <div>
+                <label for="userName">Имя:</label><br>
+                <input type="text" name="userName" id="userName" required
+                placeholder="Фамилия Имя Отчество"
+                pattern="[А-ЯЁ][а-яё]+[ ][А-ЯЁ][а-яё]+[ ][А-ЯЁ][а-яё]+">
+            </div>
+
+            <div>
+                <label for="phone">Контактный телефон:</label><br>
+                <input type="tel" name="phone" id="phone" required
+                placeholder="+7XXXXXXXXX"
+                pattern="^\+7[0-9]{9}$">
+            </div>
+
+            <div>
+                <label for="email">Адрес электронной почты:</label><br>
+                <input type="email" name="email" id="email" required
+                placeholder="address@mail.ru">
+            </div>
+
+            <div>
+                <label for="section">Секция конференции:</label><br>
+                <select name="section" id="section" required>
+                    <option value="math">математика</option>
+                    <option value="physics">физика</option>
+                    <option value="IT">информатика</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="birth">Дата рождения:</label><br>
+                <input type="date" name="birth" id="birth">
+            </div>
+
+            <div>
+                <input type="checkbox" name="speaker" id="speaker">
+                <label for="speaker" class="gopstop" data-tooltip="А если найду?">Есть доклад?</label><br>
+            </div>
+
+            <div id="topicContainer" style="display: none;">
+                <label for="topic">Тема доклада:</label><br>
+                <textarea name="topic" id="topic"></textarea>
+            </div>
+
+            <div class="submitButton">
+                <input type="submit" value="Зарегистрироваться">
+            </div>
+        </form>
+    </div>
+</body>
+<footer>
+    <div>
+        Ермакова Р.А. ПИ-С-23
+    </div>
+</footer>
+</html>

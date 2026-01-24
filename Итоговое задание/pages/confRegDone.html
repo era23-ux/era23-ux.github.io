@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завершение регистрации</title>
+    
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<nav>
+    <div>
+        <a href="test.html">Тест</a>
+    </div>
+    <div>
+        <a href="conferenceRegistration.html">Конференция</a>
+    </div>
+    <div>
+        <a href="gallery.html">Галерея</a>
+    </div>
+</nav>
+<body>
+    <div class="card" id="userInfoDisplay">
+        <h1>info</h1>
+
+    </div>
+
+    <script>
+        const userInfo = JSON.parse(localStorage.getItem('userInfo') || "[]");
+        const userInfoDisplay = document.getElementById('userInfoDisplay');
+        userInfo.forEach(answer => {
+            const div = document.createElement('div');
+            div.textContent = answer;
+            userInfoDisplay.appendChild(div);
+        });
+    </script>
+</body>
+<footer>
+    <div>
+        Ермакова Р.А. ПИ-С-23
+    </div>
+</footer>
+</html>

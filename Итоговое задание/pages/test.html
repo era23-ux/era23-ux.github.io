@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+        
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+
+    <script src="../scripts/testScript.js" defer></script>
+</head>
+<!-- Задание 5. Тест по основам веб-программирования
+    Составить тест из 6 вопросов по веб-программированию, использовать все элементы формы. (20 баллов)
+    Вопросы расположить в двух или трех колонках. (10 баллов)
+    Написать скрипт для проверки теста. После выполнения теста нужно вывести: количество правильных ответов,  неправильные ответы. (20 баллов + 20 баллов за оформление) -->
+<nav>
+    <div>
+        <a href="test.html">Тест</a>
+    </div>
+    <div>
+        <a href="conferenceRegistration.html">Конференция</a>
+    </div>
+    <div>
+        <a href="gallery.html">Галерея</a>
+    </div>
+</nav>
+<body>
+    <div class="card">
+        <h1>Тест по веб-программированию</h1>
+        <form action="" method="post" id="testForm">
+            <div class="wrapperTest">
+                <div class="question">
+                    <label for="Q1">Какой символ используется в HTML для открытия тега? (напишите соответствующую скобку)</label><br>
+                    <input type="text" name="Q1" id="Q1">
+                </div>
+
+                <div class="question">
+                    <div>
+                        Какие из этих тегов - одиночные?
+                    </div>
+                    <input type="checkbox" name="Q2" id="Q2A1br" value="br"> <label for="Q2A1">br</label> <br>
+                    <input type="checkbox" name="Q2" id="Q2A2img" value="img"> <label for="Q2A2">img</label> <br>
+                    <input type="checkbox" name="Q2" id="Q2A3div" value="div"> <label for="Q2A3">div</label> <br>
+                    <input type="checkbox" name="Q2" id="Q2A4head" value="head"> <label for="Q2A3">head</label> <br>
+                </div>
+
+                <div class="question">
+                    <label for="Q3">Какой тег создает самый большой заголовок?</label><br>
+                    <select name="Q3" id="Q3">
+                        <option value="h1">h1</option>
+                        <option value="h2">h2</option>
+                        <option value="h3">h3</option>
+                        <option value="h4">h4</option>
+                        <option value="h5">h5</option>
+                        <option value="h6">h6</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <div>
+                        HTML - это
+                    </div>
+                    <input type="radio" name="Q4" id="Q4A1hypertext" value="Q4A1hypertext"> <label for="Q4A1hypertext">язык гипертекстовой разметки</label> <br>
+                    <input type="radio" name="Q4" id="Q4A2frontend" value="Q4A2frontend"> <label for="Q4A2frontend">язык программирования, обычно использующийся для фронтенд-разработки</label> <br>
+                    <input type="radio" name="Q4" id="Q4A3backend" value="Q4A3backend"> <label for="Q4A3backend">язык программирования, обычно использующийся для бэкенд-разработки</label> <br>
+                </div>
+
+                <div class="question">
+                    <div>
+                        PHP - это
+                    </div>
+                    <input type="radio" name="Q5" id="Q5A1hypertext" value="Q5A1hypertext"> <label for="Q5A1hypertext">язык гипертекстовой разметки</label> <br>
+                    <input type="radio" name="Q5" id="Q5A2frontend" value="Q5A2frontend"> <label for="Q5A2frontend">язык программирования, обычно использующийся для фронтенд-разработки</label> <br>
+                    <input type="radio" name="Q5" id="Q5A3backend" value="Q5A3backend"> <label for="Q5A3backend">язык программирования, обычно использующийся для бэкенд-разработки</label> <br>
+                </div>
+
+                <div class="question">
+                    <div>
+                        JavaScript - это
+                    </div>
+                    <input type="radio" name="Q6" id="Q6A1hypertext" value="Q6A1hypertext"> <label for="Q6A1hypertext">язык гипертекстовой разметки</label> <br>
+                    <input type="radio" name="Q6" id="Q6A2frontend" value="Q6A2frontend"> <label for="Q6A2frontend">язык программирования, обычно использующийся для фронтенд-разработки</label> <br>
+                    <input type="radio" name="Q6" id="Q6A3backend" value="Q6A3backend"> <label for="Q6A3backend">язык программирования, обычно использующийся для бэкенд-разработки</label> <br>
+                </div>
+            </div>
+
+            <div class="submitButton">
+                <input type="submit" value="Проверить ответы">
+            </div>
+        </form>
+    </div>
+</body>
+<footer>
+    <div>
+        Ермакова Р.А. ПИ-С-23
+    </div>
+</footer>
+</html>
